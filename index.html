@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="canva">
+      <div>
+        <button id="start-button">Iniciar Captura</button>
+        <button id="show-points-nottingham">Mostrar Pontos de Nottingham</button>
+        <button id="show-landmarks">Mostrar Pontos Faciais</button>
+        <strong id="instruction"></strong>
+      </div>
+      
+      <canvas class="output_canvas" width="680px" height="680px"></canvas>
+      
+      <video class="input_video"></video>
+      
+      <div id="results">
+      </div>
+      
+      
+    </div>
+    
+  </div>
+</body>
+</html>
+
+<style>
+  .input_video{
+    float: left;
+    display: none;
+  }
+
+  #canva{
+    float: left;
+  }
+
+  button{
+    padding: 10px;
+
+  }
+
+  #results{
+    float: right;
+  }
+
+  .image{
+    margin: 10px;
+    float: left;
+  }
+</style>
+
+<script src="./app.js" type="module"></script>
